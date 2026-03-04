@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashraful Islam — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Ashraful Islam</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="journey.html">Journey</a>
+        <a href="exploring.html">Exploring</a>
+        <a href="goals.html">Goals</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section style="padding: 100px 0 60px;">
+      <div class="container">
+        <div class="fade-in">
+          <span class="section-label">Reach Out</span>
+        </div>
+        <h1 class="fade-up delay-1" style="margin-bottom: 20px;">
+          Let's <span class="gradient-text">Connect</span>
+        </h1>
+        <p class="fade-up delay-2" style="max-width: 500px;">
+          I'm always open to connecting with fellow learners, mentors, and curious minds. Don't hesitate to say hello.
+        </p>
+        <div class="divider fade-up delay-3"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section style="padding: 20px 0 120px;">
+      <div class="container">
+        <div class="contact-wrapper">
+
+          <!-- LEFT: Info -->
+          <div class="fade-up delay-1">
+            <h2 style="margin-bottom: 16px;">Say Hello</h2>
+            <p style="margin-bottom: 32px;">
+              Whether you have a question, want to share knowledge, or just want to talk about AI — I'd love to hear from you.
+            </p>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <span>Exploring the world of technology, one step at a time</span>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🎯</div>
+              <span>Focused on Artificial Intelligence &amp; Machine Learning</span>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">💡</div>
+              <span>Always open to learning and collaboration</span>
+            </div>
+
+            <div style="margin-top: 48px; padding: 28px 28px; background: var(--green-dim); border: 1px solid rgba(52,211,153,0.2); border-radius: var(--radius-sm);">
+              <p style="font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--green); margin-bottom: 6px;">
+                Open to Mentorship
+              </p>
+              <p style="font-size: 0.9rem;">
+                If you're experienced in AI or technology and willing to guide a passionate learner, I'd be genuinely grateful.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div class="glass-card fade-up delay-2" style="padding: 44px;">
+            <form id="contactForm" novalidate>
+
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. Alex Johnson" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 8px;">
+                Send Message
+              </button>
+
+              <div class="success-msg" id="successMsg">
+                ✅ Message sent! Thank you for reaching out.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>crafted by <span>ASHRAFUL ISLAM</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
