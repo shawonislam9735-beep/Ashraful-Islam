@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashraful Islam — Home</title>
+  <meta name="description" content="Student exploring Artificial Intelligence, technology, and creative problem-solving." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== HOME-SPECIFIC STYLES ===== */
+
+    /* ambient ambient glow blobs */
+    .ambient-blob-1 {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      top: -200px;
+      right: -200px;
+      background: radial-gradient(circle, rgba(0,255,136,0.05) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      animation: float-blob 8s ease-in-out infinite;
+    }
+
+    .ambient-blob-2 {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      bottom: 0;
+      left: -100px;
+      background: radial-gradient(circle, rgba(0,212,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      animation: float-blob 12s ease-in-out infinite reverse;
+    }
+
+    @keyframes float-blob {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(20px, 30px); }
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro-section {
+      padding: 100px 0 80px;
+    }
+
+    .intro-quote {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+    }
+
+    .intro-quote .highlight {
+      color: var(--cyan);
+      text-shadow: 0 0 20px rgba(0,212,255,0.4);
+    }
+
+    /* ===== PILL BUTTONS ===== */
+    .btn-pill {
+      border-radius: 999px !important;
+      padding: 14px 36px !important;
+      font-size: 0.9rem;
+      transition: transform 0.3s cubic-bezier(0.23,1,0.32,1),
+                  box-shadow 0.3s cubic-bezier(0.23,1,0.32,1),
+                  background 0.3s ease,
+                  border-color 0.3s ease !important;
+    }
+
+    a.btn-primary.btn-pill {
+      background: linear-gradient(135deg, #00FF88 0%, #00e67a 60%, #00c96b 100%);
+      color: #0B0F14;
+      border: none;
+      box-shadow: 0 0 28px rgba(0,255,136,0.35), 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    a.btn-primary.btn-pill:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 0 50px rgba(0,255,136,0.55), 0 8px 28px rgba(0,0,0,0.3);
+    }
+
+    a.btn-outline.btn-pill {
+      background: transparent;
+      border: 1.5px solid rgba(0,255,136,0.45);
+      color: var(--neon-green);
+      box-shadow: 0 0 16px rgba(0,255,136,0.08), inset 0 0 0 0 rgba(0,255,136,0);
+      position: relative;
+      overflow: hidden;
+    }
+
+    a.btn-outline.btn-pill::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(0,255,136,0.12), rgba(0,212,255,0.08));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    a.btn-outline.btn-pill:hover {
+      transform: translateY(-3px) scale(1.04);
+      border-color: rgba(0,255,136,0.75);
+      color: #fff;
+      box-shadow: 0 0 32px rgba(0,255,136,0.2), 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    a.btn-outline.btn-pill:hover::before {
+      opacity: 1;
+    }
+
+    /* Featured tags */
+    .tag-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient glow -->
+  <div class="ambient-blob-1"></div>
+  <div class="ambient-blob-2"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ashraful <span>Islam</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="exploring.html">Exploring</a></li>
+        <li><a href="goals.html">Goals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- LEFT: text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          Student &bull; AI Enthusiast
+        </div>
+
+        <h1 class="hero-headline">
+          <span class="line">Learning.</span>
+          <span class="line"><span class="glow-text">Exploring.</span></span>
+          <span class="line">Growing.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          I'm a student exploring Artificial Intelligence, technology, and creative problem-solving while building my future step by step.
+        </p>
+
+        <div class="hero-cta">
+          <a href="journey.html" class="btn-primary btn-pill">
+            Explore My Journey
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="goals.html" class="btn-outline btn-pill">
+            View My Goals
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Orb -->
+      <div class="hero-orb-wrap">
+        <div class="orb-scene">
+          <div class="orb-glow-bg"></div>
+          <div class="orb-outer-ring"></div>
+          <div class="orb-mid-ring"></div>
+          <div class="orb-glass"></div>
+          <div class="orb-core"></div>
+          <div class="orb-particles"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Divider -->
+  <div class="glow-divider"></div>
+
+  <!-- ===== INTRO / ABOUT SECTION ===== -->
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+
+        <!-- Left: text -->
+        <div class="intro-text reveal">
+          <div class="section-label">About Me</div>
+          <h2 class="intro-quote">
+            Curiosity is my<br/>
+            greatest <span class="highlight">superpower.</span>
+          </h2>
+          <p>
+            I believe that technology has the power to change the world — and that starts with <strong>understanding how it works</strong>. Every line of code, every concept in AI, every design decision is a step closer to building something meaningful.
+          </p>
+          <p>
+            My journey is fuelled by a deep curiosity about <strong>Artificial Intelligence</strong> and how machines can learn, reason, and create. I'm constantly learning, growing, and pushing my own limits.
+          </p>
+
+          <div class="tag-row">
+            <span class="neon-tag">AI Enthusiast</span>
+            <span class="neon-tag">Python Learner</span>
+            <span class="neon-tag">UI Explorer</span>
+            <span class="neon-tag">Future Engineer</span>
+          </div>
+        </div>
+
+        <!-- Right: stat cards -->
+        <div class="intro-stats stagger reveal" style="transition-delay: 0.15s;">
+          <div class="stat-card">
+            <div class="stat-icon">🤖</div>
+            <div class="stat-value">AI</div>
+            <div class="stat-label">Primary Focus</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🐍</div>
+            <div class="stat-value">Python</div>
+            <div class="stat-label">Learning Now</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌐</div>
+            <div class="stat-value">Web</div>
+            <div class="stat-label">Exploring</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">♾️</div>
+            <div class="stat-value">∞</div>
+            <div class="stat-label">Curiosity Level</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="glow-divider"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-line"></div>
+    <p class="footer-text">crafted by <span>ASHRAFUL ISLAM</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

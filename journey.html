@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashraful Islam — Journey</title>
+  <meta name="description" content="My learning journey through technology, programming and AI." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Journey page specific */
+    .journey-header {
+      padding: 160px 20px 60px;
+      text-align: center;
+    }
+
+    .journey-header-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .journey-header .section-label {
+      justify-content: center;
+    }
+
+    .timeline-section {
+      padding: 40px 0 120px;
+    }
+
+    /* Chapter labels */
+    .timeline-chapter {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--cyan);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      opacity: 0.7;
+    }
+
+    /* Tag chips on timeline cards */
+    .timeline-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .timeline-tag {
+      padding: 4px 12px;
+      background: rgba(0,212,255,0.06);
+      border: 1px solid rgba(0,212,255,0.15);
+      border-radius: 100px;
+      font-size: 0.72rem;
+      color: var(--cyan);
+      font-family: var(--font-mono);
+      letter-spacing: 0.06em;
+    }
+
+    /* Ambient glow for journey page */
+    .journey-ambient {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0,212,255,0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="journey-ambient"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ashraful <span>Islam</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html" class="active">Journey</a></li>
+        <li><a href="exploring.html">Exploring</a></li>
+        <li><a href="goals.html">Goals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="journey-header">
+    <div class="journey-header-inner">
+      <div class="section-label reveal">My Story</div>
+      <h1 class="section-title reveal" style="transition-delay:0.1s; font-size: clamp(2.5rem,5vw,4rem);">
+        The <span class="accent">Journey</span> So Far
+      </h1>
+      <p class="section-subtitle reveal" style="transition-delay:0.2s; margin: auto; text-align:center;">
+        Every great engineer started somewhere. Here's where mine began — and where it's heading.
+      </p>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="glow-divider" style="position:relative; z-index:1;"></div>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-chapter">Chapter 01</div>
+            <div class="timeline-year">Beginning</div>
+            <h3>The First Spark</h3>
+            <p>
+              It started with a simple question: <em>how does any of this work?</em> A phone, a computer, the internet — these everyday tools felt like magic. That curiosity about the invisible systems behind technology became the foundation of everything.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Curiosity</span>
+              <span class="timeline-tag">Discovery</span>
+              <span class="timeline-tag">Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-chapter">Chapter 02</div>
+            <div class="timeline-year">Learning</div>
+            <h3>Exploring Code & Creativity</h3>
+            <p>
+              The moment I wrote my first lines of code, something clicked. Programming wasn't just about machines — it was a <em>language</em>. A language to build, create, and solve. I began exploring Python, the web, and the art of turning ideas into something real.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Web Basics</span>
+              <span class="timeline-tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-chapter">Chapter 03</div>
+            <div class="timeline-year">Growth</div>
+            <h3>Building Discipline & AI Knowledge</h3>
+            <p>
+              Growth demanded more than just enthusiasm — it required <em>discipline</em>. I started building structured habits: learning every day, embracing difficulty, and diving into Artificial Intelligence. Machine learning, neural networks, and AI systems became my new frontier.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">AI & ML</span>
+              <span class="timeline-tag">Discipline</span>
+              <span class="timeline-tag">Systems Thinking</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-chapter">Chapter 04</div>
+            <div class="timeline-year">Now</div>
+            <h3>The Path Continues</h3>
+            <p>
+              This is not the end — it's the middle of the beginning. Every concept learned opens three new doors. Every skill built reveals a deeper layer. I'm walking forward with a clear direction: to become an AI engineer who builds technology that <em>actually matters</em>.
+            </p>
+            <div class="timeline-tags">
+              <span class="timeline-tag">AI Engineering</span>
+              <span class="timeline-tag">Continuous Learning</span>
+              <span class="timeline-tag">Future</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="glow-divider" style="position:relative;z-index:1;"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-line"></div>
+    <p class="footer-text">crafted by <span>ASHRAFUL ISLAM</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

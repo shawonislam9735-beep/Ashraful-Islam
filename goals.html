@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashraful Islam — Goals</title>
+  <meta name="description" content="My future vision and goals as an aspiring AI engineer." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Goals page specific */
+    .goals-page-wrap {
+      min-height: 100vh;
+      padding-top: 72px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .goals-hero {
+      padding: 100px 20px 0;
+      text-align: center;
+    }
+
+    .goals-hero-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .goals-hero .section-label {
+      justify-content: center;
+    }
+
+    .goals-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .goals-hero h1 .word-vision {
+      background: linear-gradient(135deg, var(--neon-green), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 20px rgba(0,255,136,0.3));
+    }
+
+    .goals-hero p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* Goals list area */
+    .goals-list-section {
+      padding: 80px 0 120px;
+      flex: 1;
+    }
+
+    .goals-list-inner {
+      max-width: 760px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* Big number */
+    .goal-number {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--neon-green);
+      opacity: 0.5;
+      min-width: 40px;
+      padding-top: 3px;
+      letter-spacing: 0.1em;
+    }
+
+    .goal-icon {
+      font-size: 1.4rem;
+      min-width: 32px;
+      text-align: center;
+    }
+
+    /* Vision statement block */
+    .vision-block {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vision-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--neon-green), var(--cyan), transparent);
+    }
+
+    .vision-block::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,255,136,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .vision-quote {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 600;
+      line-height: 1.6;
+      color: var(--text-primary);
+      position: relative;
+      z-index: 1;
+    }
+
+    .vision-quote::before {
+      content: '"';
+      display: block;
+      font-size: 4rem;
+      color: var(--neon-green);
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: -10px;
+    }
+
+    /* Spotlight radial for the page */
+    .goals-spotlight {
+      position: fixed;
+      width: 800px;
+      height: 800px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0,255,136,0.025) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="goals-spotlight"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ashraful <span>Islam</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="exploring.html">Exploring</a></li>
+        <li><a href="goals.html" class="active">Goals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="goals-page-wrap">
+
+    <!-- Hero -->
+    <div class="goals-hero">
+      <div class="goals-hero-inner">
+        <div class="section-label reveal">The Future</div>
+        <h1 class="reveal" style="transition-delay:0.1s;">
+          My Future<br/><span class="word-vision">Vision</span>
+        </h1>
+        <p class="reveal" style="transition-delay:0.2s;">
+          These aren't dreams — they're targets. Clear, specific, and burning with intention.
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="glow-divider" style="position:relative;z-index:1; margin: 60px 0 0;"></div>
+
+    <!-- Goals list -->
+    <section class="goals-list-section">
+      <div class="goals-list-inner">
+
+        <!-- Vision block -->
+        <div class="vision-block reveal">
+          <p class="vision-quote">
+            The goal is not just to learn AI — it's to <em>build</em> AI systems that solve problems that matter, reach people who need it, and stand the test of time.
+          </p>
+        </div>
+
+        <!-- Goals -->
+        <div class="goals-list">
+
+          <div class="goal-item">
+            <span class="goal-number">01</span>
+            <span class="goal-icon">🤖</span>
+            <div class="goal-content">
+              <h3>Become an Artificial Intelligence Engineer</h3>
+              <p>Build a career at the intersection of research and real-world application — engineering AI systems that actually work at scale.</p>
+            </div>
+          </div>
+
+          <div class="goal-item">
+            <span class="goal-number">02</span>
+            <span class="goal-icon">🧠</span>
+            <div class="goal-content">
+              <h3>Master Machine Learning & Deep Learning</h3>
+              <p>Go deep into the mathematics and mechanics of neural networks, model architectures, and training pipelines. Not surface-level — truly understand the foundations.</p>
+            </div>
+          </div>
+
+          <div class="goal-item">
+            <span class="goal-number">03</span>
+            <span class="goal-icon">⚙️</span>
+            <div class="goal-content">
+              <h3>Build AI Systems That Solve Real-World Problems</h3>
+              <p>Apply AI not just in notebooks but in production — systems that help people, automate the difficult, and create genuine impact.</p>
+            </div>
+          </div>
+
+          <div class="goal-item">
+            <span class="goal-number">04</span>
+            <span class="goal-icon">🎓</span>
+            <div class="goal-content">
+              <h3>Study Advanced AI in the Future</h3>
+              <p>Pursue higher education focused on AI research — exploring cutting-edge areas like reinforcement learning, generative models, and AI safety.</p>
+            </div>
+          </div>
+
+          <div class="goal-item">
+            <span class="goal-number">05</span>
+            <span class="goal-icon">♾️</span>
+            <div class="goal-content">
+              <h3>Continue Learning Without Limits</h3>
+              <p>Stay curious forever. The landscape of technology never stops evolving — and neither will I. Learning is the only constant.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="glow-divider" style="position:relative;z-index:1;"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-line"></div>
+    <p class="footer-text">crafted by <span>ASHRAFUL ISLAM</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

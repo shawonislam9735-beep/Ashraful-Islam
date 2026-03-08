@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashraful Islam — Exploring</title>
+  <meta name="description" content="Areas I'm currently exploring and studying." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Exploring page specific */
+    .exploring-header {
+      padding: 160px 20px 60px;
+      text-align: center;
+    }
+
+    .exploring-header-inner {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .exploring-header .section-label {
+      justify-content: center;
+    }
+
+    .cards-section {
+      padding: 40px 0 120px;
+    }
+
+    /* Extended card content */
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    .card-status {
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.1em;
+      color: var(--neon-green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-status::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--neon-green);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--neon-green);
+      animation: pulse 2s infinite;
+    }
+
+    .card-level {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* Progress bar */
+    .card-progress {
+      margin-top: 16px;
+      height: 3px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .card-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--neon-green), var(--cyan));
+      border-radius: 100px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s cubic-bezier(0.23,1,0.32,1) 0.3s;
+      box-shadow: 0 0 8px rgba(0,255,136,0.5);
+    }
+
+    .tilt-card.in-view .card-progress-fill {
+      transform: scaleX(1);
+    }
+
+    /* Featured card (spans 2 cols) */
+    .card-featured {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 768px) {
+      .card-featured { grid-column: span 1; }
+    }
+
+    /* Ambient */
+    .explore-ambient {
+      position: fixed;
+      width: 700px;
+      height: 700px;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0,255,136,0.03) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="explore-ambient"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Ashraful <span>Islam</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="journey.html">Journey</a></li>
+        <li><a href="exploring.html" class="active">Exploring</a></li>
+        <li><a href="goals.html">Goals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="exploring-header">
+    <div class="exploring-header-inner">
+      <div class="section-label reveal">Active Learning</div>
+      <h1 class="section-title reveal" style="transition-delay:0.1s; font-size: clamp(2.5rem,5vw,4rem);">
+        What I'm <span class="accent">Exploring</span>
+      </h1>
+      <p class="section-subtitle reveal" style="transition-delay:0.2s; margin:auto; text-align:center;">
+        These are the domains I'm actively studying, building skills in, and obsessing over right now.
+      </p>
+    </div>
+  </div>
+
+  <div class="glow-divider" style="position:relative;z-index:1;"></div>
+
+  <!-- ===== CARDS GRID ===== -->
+  <section class="cards-section">
+    <div class="container">
+      <div class="cards-grid">
+
+        <!-- Card 1: Programming -->
+        <div class="tilt-card">
+          <div class="card-icon-wrap">🐍</div>
+          <h3>Programming</h3>
+          <p>
+            Learning Python from the ground up — variables, data structures, algorithms, and writing clean, purposeful code. The language of AI starts here.
+          </p>
+          <div class="card-progress">
+            <div class="card-progress-fill" style="--fill: 55%; width: 55%;"></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-status">Active</span>
+            <span class="card-level">Beginner → Intermediate</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+
+        <!-- Card 2: AI -->
+        <div class="tilt-card">
+          <div class="card-icon-wrap">🤖</div>
+          <h3>Artificial Intelligence</h3>
+          <p>
+            Exploring the fundamentals of machine learning, neural networks, and AI systems. Understanding how machines learn and make decisions.
+          </p>
+          <div class="card-progress">
+            <div class="card-progress-fill" style="width: 40%;"></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-status">Active</span>
+            <span class="card-level">Foundations</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+
+        <!-- Card 3: UI/UX -->
+        <div class="tilt-card">
+          <div class="card-icon-wrap">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>
+            Studying modern interface design principles — visual hierarchy, user flows, interaction patterns, and how great design shapes experience.
+          </p>
+          <div class="card-progress">
+            <div class="card-progress-fill" style="width: 60%;"></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-status">Active</span>
+            <span class="card-level">Intermediate</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+
+        <!-- Card 4: English -->
+        <div class="tilt-card">
+          <div class="card-icon-wrap">🌍</div>
+          <h3>English Communication</h3>
+          <p>
+            Developing professional communication skills — reading, writing, speaking, and understanding global contexts for the tech world.
+          </p>
+          <div class="card-progress">
+            <div class="card-progress-fill" style="width: 70%;"></div>
+          </div>
+          <div class="card-meta">
+            <span class="card-status">Active</span>
+            <span class="card-level">Intermediate</span>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider" style="position:relative;z-index:1;"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-line"></div>
+    <p class="footer-text">crafted by <span>ASHRAFUL ISLAM</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Animate progress bars when cards come into view
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.3 });
+
+      document.querySelectorAll('.tilt-card').forEach(card => observer.observe(card));
+    });
+  </script>
+</body>
+</html>
